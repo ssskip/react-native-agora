@@ -227,8 +227,8 @@ public class AgoraModule extends ReactContextBaseJavaModule {
 
     //进入房间
     @ReactMethod
-    public void joinChannel(String channelName, int uid) {
-        AgoraManager.getInstance().joinChannel(channelName, uid);
+    public void joinChannel(String channelKey, String channelName, int uid) {
+        AgoraManager.getInstance().joinChannel(channelKey, channelName, uid);
     }
 
     //退出

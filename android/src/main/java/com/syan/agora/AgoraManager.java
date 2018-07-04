@@ -90,8 +90,8 @@ public class AgoraManager {
         return this;
     }
 
-    public AgoraManager joinChannel(String channel, int uid) {
-        mRtcEngine.joinChannel(null, channel, null, uid);
+    public AgoraManager joinChannel(String key,String channel, int uid) {
+        mRtcEngine.joinChannel(key, channel, null, uid);
         return this;
     }
 

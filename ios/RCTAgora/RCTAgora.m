@@ -68,10 +68,10 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)options) {
 }
 
 //加入房间
-RCT_EXPORT_METHOD(joinChannel:(NSString *)channelName uid:(NSInteger)uid) {
+RCT_EXPORT_METHOD(joinChannel:(NSString *)channelKey channelName:(NSString *)channelName uid:(NSInteger)uid) {
     //保存一下uid 在自定义视图使用
     [AgoraConst share].localUid = uid;
-    [self.rtcEngine joinChannelByKey:nil channelName:channelName info:nil uid:uid joinSuccess:NULL];
+    [self.rtcEngine joinChannelByKey:channelKey channelName:channelName info:nil uid:uid joinSuccess:NULL];
 }
 
 //离开频道
